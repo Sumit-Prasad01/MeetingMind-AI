@@ -1,1 +1,3 @@
 DOWNLOAD_DIR = 'downloads'
+
+SARVAM_PIECE_SECONDS = 25
