@@ -4,7 +4,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 
-from core.vector_store import build_vector_store, load_vector_store, get_retriever, get_embeddings
+from src.core.vector_store import build_vector_store, load_vector_store, get_retriever, get_embeddings
 from src.config import settings
 from src.logger import logger
 

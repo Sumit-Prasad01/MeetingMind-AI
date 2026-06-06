@@ -39,7 +39,7 @@ def build_chain(system_prompt : str):
     )
 
     return (
-        RunnablePassthrough                     |
+        RunnablePassthrough()                     |
         RunnableLambda(lambda x : {"text" : x}) |
         prompt                                  |
         llm                                     |

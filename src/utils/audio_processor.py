@@ -69,7 +69,7 @@ def process_audio(source : str) -> list:
         wav_path = download_youtube_audio(source)
 
     else:
-        print("Detected local file. Converting to WAV...")
+        logger.info("Detected local file. Converting to WAV...")
         wav_path = convert_to_wav(source)
 
     
