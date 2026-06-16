@@ -6,5 +6,5 @@ CHROMA_DIR = "vector_db"
 
 COLLECTION_NAME = "meeting_transcript"
 
-EMBEDDING_MODEL = "sentence-transformers/all-Mini-L6-v2"
+EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 
