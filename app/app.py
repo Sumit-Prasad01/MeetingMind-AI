@@ -1,14 +1,12 @@
-from app.styles import STYLE
+from styles import STYLE
 import streamlit as st
 import time
-from dotenv import load_dotenv
-from utils.audio_processor import process_input
-from core.transcriber import transcribe_all
-from core.summarizer import summarize, generate_title
-from core.extractor import extract_action_items, extract_key_decisions, extract_questions
-from core.rag_engine import build_rag_chain, ask_question
+from src.utils.audio_processor import process_audio
+from src.core.transcriber import transcribe_all
+from src.core.summarize import summarize, generate_title
+from src.core.extractor import extract_action_items, extract_key_decisions, extract_questions
+from src.core.rag_engine import build_rag_chain, ask_question
 
-load_dotenv()
 
 # ─── Page Config ────────────────────────────────────────────────────────────────
 st.set_page_config(
@@ -98,7 +96,7 @@ if run_btn:
                 st.info("⚙️ Pipeline running — see sidebar for live status…")
 
             update_step("audio", "active")
-            chunks = process_input(source)
+            chunks = process_audio(source)
             update_step("audio", "done")
 
             update_step("transcript", "active")
